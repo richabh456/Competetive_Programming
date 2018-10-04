@@ -19,7 +19,7 @@ int main()
             y = 1;
         }
         else { y++ ; cout << "   y != " << pow(2,x) << "\n    y changed to = " << y << " from " << y-1  << endl; }
-        arr[i] = ((i%2) + x-1 ) ;
+        arr[i] = ((i%2) + ((x-1)%2) + x%2 ) ;
         cout << "arr[" << i << "] = " << arr[i]  << endl;
 
     }
