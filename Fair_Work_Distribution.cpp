@@ -6,12 +6,13 @@ using namespace std;
 
 int group( int mid , int* arr , int n , int k ) {
 
-    int dist[k] ;
+    int dist[] = {0,0,0,0} ;
     int students = 1, pages = 0;
 
     for ( int i = 0 ; i < n ; ++i ) {
         if ( students > k || mid < arr[i] ) return -1 ;
         pages += arr[i] ;
+        if ( i == n-1 && pages < mid ) return -1;
         if ( pages >= mid ) {
             dist[students - 1] = pages ;
             pages = 0 ;
@@ -40,12 +41,13 @@ int main() {
     while ( hi >= lo ) {
 
         mid = (hi + lo) / 2 ;
-
+        //cout << "\nhi = " << hi << " lo = " << lo << " mid = " << mid ;
         int x = group( mid , arr , n , k ) ;
-
+        //cout << "\nx=" << x ;
         if ( x == -1 ) ++lo ; 
         else if ( x > ans ) {
             lo = mid + 1 ;
+            //ans = x ;
         }
         else if ( x < ans ) { 
             hi = mid - 1 ;
@@ -58,6 +60,6 @@ int main() {
 
     }
 
-    cout << ans << endl;
+    cout << endl << ans << endl;
 
 }
