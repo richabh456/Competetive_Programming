@@ -5,13 +5,13 @@ using namespace std ;
 
 int main() {
 
-    int n, l, a ;
-    int x , sum = 0 ;
+    long long int n, l, a ;
+    long long int y , sum = 0 ;
     cin >> n >> l >> a ;
-    vector< int > arr(n) ;
+    vector< long long int > arr(n) ;
     for ( auto i = 0 ; i < n ; ++i ) {
-        cin >> x >> arr[i] ;
+        cin >> y >> arr[i] ;
         sum += arr[i] ;
     }
-    cout << (l - sum ) / a << endl ;
+    cout << (l - sum ) / a ;
 }
