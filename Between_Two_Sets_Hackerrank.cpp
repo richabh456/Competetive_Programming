@@ -22,8 +22,8 @@ int main() {
         flag = 0 ;
     }
     if ( a[0] >= b[B-1] ) {
-        start = b[0];
-        end = a[A-1] ;
+        start = b[B-1];
+        end = a[0] ;
         flag = 1 ;
     }
     cout << endl ;
