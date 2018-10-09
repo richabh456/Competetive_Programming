@@ -22,11 +22,16 @@ int main() {
         flag = 0 ;
     }
     if ( a[0] >= b[B-1] ) {
-        start = a[0];
-        end = b[B-1] ;
+        start = b[0];
+        end = a[A-1] ;
         flag = 1 ;
     }
+    cout << endl ;
+    for ( auto i : a ) cout << i << " " ;
+    cout << endl ;
+    for ( auto i : b ) cout << i << " " ;
     int ans = 0;
+    cout << endl << start << " " << end << " " << flag << endl ;
     for ( auto i = start ; i != end+1 ; ++i ) {
         if (!flag) {
             flag1 = 1 ;
