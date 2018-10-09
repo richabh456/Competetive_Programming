@@ -26,12 +26,7 @@ int main() {
         end = a[0] ;
         flag = 1 ;
     }
-    cout << endl ;
-    for ( auto i : a ) cout << i << " " ;
-    cout << endl ;
-    for ( auto i : b ) cout << i << " " ;
     int ans = 0;
-    cout << endl << start << " " << end << " " << flag << endl ;
     for ( auto i = start ; i != end+1 ; ++i ) {
         if (!flag) {
             flag1 = 1 ;
@@ -52,7 +47,8 @@ int main() {
             if (!flag1) continue ;
             else ++ans;
         }
-        else {
+
+        if(flag) {
             flag1 = 1 ;
             for ( auto y = 0 ; y < B ; ++y ) {
                 if( i%b[y] != 0 ) {
