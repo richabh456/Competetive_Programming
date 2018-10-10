@@ -1,3 +1,4 @@
 *.o
 *.out
-.vscode/settings.json
+.vscode
+_config.yml
