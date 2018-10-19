@@ -12,7 +12,7 @@ int group( int mid , int* arr , int n , int k ) {
     for ( int i = 0 ; i < n ; ++i ) {
         if ( students > k || mid < arr[i] ) return -1 ;
         pages += arr[i] ;
-        if ( i == n-1 && pages < mid ) return -1;
+        //if ( i == n-1 && pages < mid ) return -1;
         if ( pages >= mid ) {
             dist[students - 1] = pages ;
             pages = 0 ;
@@ -36,7 +36,7 @@ int main() {
     }
 
     int hi = sum , lo = min ;
-    int mid,last ; ///last = 1 : hi  ,   last = 0 lo
+    int mid,last ; //last = 1 : hi  ,   last = 0 lo
 
     while ( hi >= lo ) {
 
